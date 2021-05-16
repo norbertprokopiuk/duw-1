@@ -47,7 +47,7 @@ pause(0.01);
 if(i<length(nowe_punkty))
    clf() 
 end
-end
+
 
 ktory_punkt=input("Dane na temat któego punktu chcesz zobaczy? (px - punkt, cx - środek cięzkości): ",'s');
 
