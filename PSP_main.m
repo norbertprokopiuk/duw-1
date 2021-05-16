@@ -18,18 +18,18 @@ pobierz_dane;
 rows = 0;
 
 for l=1:length(Wiezy)
-    if(lower(Wiezy(l).typ(1)) == 'd')
-        if(lower(Wiezy(l).klasa(1)) == 'o')
+    if(lower(Wiezy(l).typ) == "dopisany")
+        if(lower(Wiezy(l).klasa) == "obrotowy")
             rows = rows + 1;
-        elseif(lower(Wiezy(l).klasa(1)) == 'p')
+        elseif(lower(Wiezy(l).klasa) == "postepowy")
             rows = rows + 1;
         else
             error(['Blad: zle podana klasa wiezu nr', num2str(l)]);
         end
-    elseif(lower(Wiezy(l).typ(1)) == 'k')
-        if(lower(Wiezy(l).klasa(1)) == 'o')
+    elseif(lower(Wiezy(l).typ) == "kinematyczny")
+        if(lower(Wiezy(l).klasa) == "obrotowy")
             rows = rows + 2;
-        elseif(lower(Wiezy(l).klasa(1)) == 'p')
+        elseif(lower(Wiezy(l).klasa) == "postepowy")
             rows = rows + 2;
         else
             error(['Blad: zle podana klasa wiezu nr', num2str(l)]);

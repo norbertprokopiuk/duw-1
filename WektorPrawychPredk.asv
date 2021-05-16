@@ -14,19 +14,19 @@ m=1;
 
 % wype³nienie macierzy niezerowymi elementami
 for l=1:length(Wiezy)
-    if(lower(Wiezy(l).typ) == "dopisany")
-        if(lower(Wiezy(l).klasa) == "obrotowy")
+    if(lower(Wiezy(l).typ(1)) == 'd')
+        if(lower(Wiezy(l).klasa(1)) == 'o')
             Prawe(m) = eval(Wiezy(l).dotfodt);
             m=m+1;
-        elseif(lower(Wiezy(l).klasa) == "postepowy")
+        elseif(lower(Wiezy(l).klasa) == 'postepowy')
             Prawe(m) = eval(Wiezy(l).dotfodt);
             m=m+1;
         end
     end
-    if(lower(Wiezy(l).typ) == "kinematyczny")
-        if(lower(Wiezy(l).klasa) == "obrotowy")
+    if(lower(Wiezy(l).typ) == 'kinematyczny')
+        if(lower(Wiezy(l).klasa) == 'obrotowy')
             m=m+2;
-        elseif(lower(Wiezy(l).klasa) == "postepowy")
+        elseif(lower(Wiezy(l).klasa(1)) == 'postepowy')
             m=m+2;
         end
     end

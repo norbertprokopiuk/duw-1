@@ -14,8 +14,8 @@ Omega = [0 -1; 1 0];
 % wype³nienie macierzy niezerowymi elementami 
 
 for l=1:length(Wiezy)
-    if(lower(Wiezy(l).typ(1)) == 'd')
-        if(lower(Wiezy(l).klasa(1)) == 'o')
+    if(lower(Wiezy(l).typ) == "dopisany")
+        if(lower(Wiezy(l).klasa) == "obrotowy")
             if(Wiezy(l).bodyi>0)
                 Jacob(m, 3*Wiezy(l).bodyi) = 1;
             end
@@ -23,7 +23,7 @@ for l=1:length(Wiezy)
                 Jacob(m, 3*Wiezy(l).bodyj) = - 1;
             end
             m = m+1;
-        elseif(lower(Wiezy(l).klasa(1)) == 'p')
+        elseif(lower(Wiezy(l).klasa) == "postepowy")
             tmp = (rot(q_phi(q, Wiezy(l).bodyj)) * Wiezy(l).perp )';
             if(Wiezy(l).bodyi>0)
                 Jacob(m, (3*Wiezy(l).bodyi - 2):(3*Wiezy(l).bodyi - 1)) = - tmp;
@@ -40,8 +40,8 @@ for l=1:length(Wiezy)
         else
             error(['Blad: zle podana klasa wiezu nr:', num2str(l)]);
         end
-    elseif(lower(Wiezy(l).typ(1)) == 'k')
-        if(lower(Wiezy(l).klasa(1)) == 'o')
+    elseif(lower(Wiezy(l).typ) == "kinematyczny")
+        if(lower(Wiezy(l).klasa) == "obrotowy")
             if(Wiezy(l).bodyi>0)
                 Jacob(m:(m+1), (3*Wiezy(l).bodyi - 2):(3*Wiezy(l).bodyi - 1)) = eye(2);
                 Jacob(m:m+1, 3*Wiezy(l).bodyi) = Omega()*...
@@ -53,7 +53,7 @@ for l=1:length(Wiezy)
                     rot(q_phi(q, Wiezy(l).bodyj))*Wiezy(l).sB;
             end
             m = m+2;
-        elseif(lower(Wiezy(l).klasa(1)) == 'p')
+        elseif(lower(Wiezy(l).klasa) == "postepowy")
             if(Wiezy(l).bodyi>0)
                 Jacob(m, 3*Wiezy(l).bodyi) = 1;
             end
