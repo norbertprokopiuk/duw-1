@@ -2,9 +2,6 @@
 
 function [ Jacob ] = Jakobian( q, t, Wiezy, rows )
 
-% wczytanie danych
-PSP_dane_silownik;
-
 % aktualny numer wiersza macierzy
 m = 1;
 

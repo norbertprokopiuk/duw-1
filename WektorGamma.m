@@ -1,8 +1,11 @@
 % funkcja, ktora oblicza wektor gamma potrzebny w zadaniu o przyspieszeniach
 function [ Gamma ] = WektorGamma( q, qdot, t, Wiezy, rows )
 
-% wczytanie danych 
-PSP_dane_silownik;
+wymuszenie=fopen('wymuszenie.txt','r');
+for i=1:8
+   eval(fgetl(wymuszenie)); 
+end
+fclose(wymuszenie);
 
 % wypelnienie macierzy samymi zerami
 Gamma = zeros(rows, 1);

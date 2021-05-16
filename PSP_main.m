@@ -12,6 +12,7 @@
 %     'dotfodt',{},... % pochodna funkcji od czasu dla wiezow dopisanych
 %     'ddotfodt',{}); % druga pochodna funkcji od czasu dla wiezow
 %     dopisanych
+close all;clc;clear
 pobierz_dane;
 % zmienna do wyznaczania liczby rownan wiezow 
 rows = 0;

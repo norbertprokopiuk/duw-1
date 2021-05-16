@@ -1,12 +1,13 @@
 % wektor rowana wiezow
 function [ Phi ] = WektorPhi( q, t, Wiezy, rows )
 
-% wczytanie danych
-PSP_dane_silownik;
-
+wymuszenie=fopen('wymuszenie.txt','r');
+for i=1:8
+   eval(fgetl(wymuszenie)); 
+end
+fclose(wymuszenie);
 % aktualny numer wiersza macierzy
 m = 1;
-
 % wypelnienie macierzy samymi zerami
 Phi = zeros(rows, 1);
 

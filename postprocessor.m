@@ -41,14 +41,6 @@ end
 %     axis([-1.4,1.2,-0.5,1.2]);
 % end
 
-
-pause(0.01);
-
-if(i<length(nowe_punkty))
-   clf() 
-end
-
-
 ktory_punkt=input("Dane na temat któego punktu chcesz zobaczy? (px - punkt, cx - środek cięzkości): ",'s');
 
 if ktory_punkt(1)=='c'

@@ -1,9 +1,11 @@
 % funkcja, ktora wyznacza prawe stron w rownaniach  
 function [ Prawe ] = WektorPrawychPredk( q, t, Wiezy, rows )
 
-% wczytanie danych
-PSP_dane_silownik;
-
+wymuszenie=fopen('wymuszenie.txt','r');
+for i=1:8
+   eval(fgetl(wymuszenie)); 
+end
+fclose(wymuszenie);
 % wype³nienie macierzy samymi zerami
 Prawe = zeros(rows, 1);
 
