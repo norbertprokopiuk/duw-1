@@ -85,7 +85,7 @@ for i=1:ilosc_wym_post{1}
 end
 
 for i=1:ilosc_wym_obr
-    Wiezy(i+ilosc_obr+ilosc_post+ilosc_wym_post{1})=cell2struct({'dopisany','obrotowy',obrotowe(i,2),obrotowe(i,3),punkty(obrotowe(i,1),:)-srodki_ciezkosci(obrotowe(i,2),:),punkty(obrotowe(i,1),:)-srodki_ciezkosci(obrotowe(i,3),:),[],[],wym_obr(i,2),wym_obr(i,3),wym_obr(i,4)}',fieldnames(Wiezy));
+    Wiezy(i+ilosc_obr+ilosc_post+ilosc_wym_post{1})=cell2struct({'dopisany','obrotowy',obrotowe(i,2),obrotowe(i,3),punkty(obrotowe(i,1),:)-srodki_ciezkosci(obrotowe(i,2),:),punkty(obrotowe(i,1),:)-srodki_ciezkosci(obrotowe(i,3),:),[],[],string(wym_obr(i,2)),string(wym_obr(i,3)),string(wym_obr(i,4))}',fieldnames(Wiezy));
 end
 
 
